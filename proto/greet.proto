@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package proto;
+
+service Greeter {
+    rpc Greet(Person) returns (Reply);
+}
+
+message Person {
+    string name = 1;
+}
+
+message Reply {
+    string body = 1;
+}
